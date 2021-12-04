@@ -1,0 +1,12 @@
+extends layout 
+
+block content 
+    h1 Register 
+    form(action='/register', method='post')
+        div.form-group
+            label(for='username')
+            input.form-control(name='username', placeholder='Username', type='text')
+            label(for='password')
+            input.form-control(name='password', placeholder='Password', type='password')
+        div.buttons
+            button.btn.btn-success(type='submit') Register 

@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    if user
+        h1 Welcome #{user.username}!
+        button.btn.btn-danger 
+            a(href='logout') Logout
+    else 
+        h1 Welcome!
+        form(action='login', method='post')
+            div.form-group
+                label(for='username')
+                input.form-control(name='username', placeholder='Username', type='text')
+                label(for='password')
+                input.form-control(name='password', placeholder='Password', type='password')
+            if error 
+                p.error=error
+            div.buttons
+                button.btn.btn-warning 
+                    a(href='register') Register
+                button.btn.btn-primary(type='submit') Login
+

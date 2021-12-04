@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    height: 100vh;
+    width: 100vw;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttons > button {
+    margin-left: 10px;
+}
+
+button > a, button > a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.error {
+    color: red;
+}
+
+form {
+    width: 25%;
+}
