@@ -47,4 +47,13 @@ router.get('/logout', (req, res) => {
     res.redirect('/')
 });
 
+router.get('/secret', (req, res) => {
+    if (req.isAuthenticated()) {
+        res.render('secret');
+    } else {
+        req.flash('error', "You don't have permission to access the secret page");
+        res.redirect('/')
+    }
+})
+
 module.exports = router;

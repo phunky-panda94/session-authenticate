@@ -3,6 +3,7 @@ extends layout
 block content
     if user
         h1 Welcome #{user.username}!
+        a(href='secret') Secret Access
         button.btn.btn-danger 
             a(href='logout') Logout
     else 
